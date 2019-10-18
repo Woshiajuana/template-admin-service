@@ -5,6 +5,10 @@ const { Controller } = require('egg');
 
 module.exports = class HandleController extends Controller {
 
+    static route (router, middleware, controller) {
+        router.mount({ name: '', usePush: false }, );
+    }
+
     // 初始化
     async init () {
         const { ctx, service, app } = this;
