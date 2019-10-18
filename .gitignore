@@ -13,4 +13,3 @@ run/
 typings/
 .nyc_output/
 app/public/apidoc/
-lib/egg-wow-admin-framework/
