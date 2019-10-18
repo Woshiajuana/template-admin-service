@@ -123,56 +123,56 @@ const baseApiRoutes = [
     },
 
     // Api 路由
-    {
-        name: '查询API路由列表',
-        path: '/api/v1/api-route/list',
-        handler: ({ controller, middleware }) => [
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
-            // middleware.oplogMiddleware(),
-            controller.apiRouteController.list,
-        ],
-    },
-    {
-        name: '初始化路由列表',
-        path: '/api/v1/api-route/init',
-        handler: ({ controller, middleware }) => [
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
-            middleware.oplogMiddleware(),
-            controller.apiRouteController.init,
-        ],
-    },
-    {
-        name: '创建API路由',
-        path: '/api/v1/api-route/create',
-        handler: ({ controller, middleware }) => [
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
-            middleware.oplogMiddleware(),
-            controller.apiRouteController.create,
-        ],
-    },
-    {
-        name: '更新API路由',
-        path: '/api/v1/api-route/update',
-        handler: ({ controller, middleware }) => [
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
-            middleware.oplogMiddleware(),
-            controller.apiRouteController.update,
-        ],
-    },
-    {
-        name: '删除API路由',
-        path: '/api/v1/api-route/delete',
-        handler: ({ controller, middleware }) => [
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
-            middleware.oplogMiddleware(),
-            controller.apiRouteController.del,
-        ],
-    },
+    // {
+    //     name: '查询API路由列表',
+    //     path: '/api/v1/api-route/list',
+    //     handler: ({ controller, middleware }) => [
+    //         middleware.jwtMiddleware(),
+    //         middleware.authMiddleware(),
+    //         // middleware.oplogMiddleware(),
+    //         controller.apiRouteController.list,
+    //     ],
+    // },
+    // {
+    //     name: '初始化路由列表',
+    //     path: '/api/v1/api-route/init',
+    //     handler: ({ controller, middleware }) => [
+    //         middleware.jwtMiddleware(),
+    //         middleware.authMiddleware(),
+    //         middleware.oplogMiddleware(),
+    //         controller.apiRouteController.init,
+    //     ],
+    // },
+    // {
+    //     name: '创建API路由',
+    //     path: '/api/v1/api-route/create',
+    //     handler: ({ controller, middleware }) => [
+    //         middleware.jwtMiddleware(),
+    //         middleware.authMiddleware(),
+    //         middleware.oplogMiddleware(),
+    //         controller.apiRouteController.create,
+    //     ],
+    // },
+    // {
+    //     name: '更新API路由',
+    //     path: '/api/v1/api-route/update',
+    //     handler: ({ controller, middleware }) => [
+    //         middleware.jwtMiddleware(),
+    //         middleware.authMiddleware(),
+    //         middleware.oplogMiddleware(),
+    //         controller.apiRouteController.update,
+    //     ],
+    // },
+    // {
+    //     name: '删除API路由',
+    //     path: '/api/v1/api-route/delete',
+    //     handler: ({ controller, middleware }) => [
+    //         middleware.jwtMiddleware(),
+    //         middleware.authMiddleware(),
+    //         middleware.oplogMiddleware(),
+    //         controller.apiRouteController.del,
+    //     ],
+    // },
 
     // 菜单路由
     {

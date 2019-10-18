@@ -6,7 +6,32 @@ const { Controller } = require('egg');
 module.exports = class HandleController extends Controller {
 
     static route (router, middleware, controller) {
-        router.mount({ name: '', usePush: false }, );
+        router.mount({ name: '查询API路由列表', path: '/api/v1/api-route/list' },
+            middleware.jwtMiddleware(),
+            middleware.authMiddleware(),
+            // middleware.oplogMiddleware(),
+            controller.apiRouteController.list
+        ).mount({ name: '初始化路由列表', path: '/api/v1/api-route/init' },
+            middleware.jwtMiddleware(),
+            middleware.authMiddleware(),
+            middleware.oplogMiddleware(),
+            controller.apiRouteController.init
+        ).mount({ name: '创建API路由', path: '/api/v1/api-route/create' },
+            middleware.jwtMiddleware(),
+            middleware.authMiddleware(),
+            middleware.oplogMiddleware(),
+            controller.apiRouteController.create,
+        ).mount({ name: '更新API路由', path: '/api/v1/api-route/update' },
+            middleware.jwtMiddleware(),
+            middleware.authMiddleware(),
+            middleware.oplogMiddleware(),
+            controller.apiRouteController.update,
+        ).mount({ name: '删除API路由', path: '/api/v1/api-route/delete' },
+            middleware.jwtMiddleware(),
+            middleware.authMiddleware(),
+            middleware.oplogMiddleware(),
+            controller.apiRouteController.del,
+        );
     }
 
     // 初始化
