@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+      "egg-wow-admin-framework": "0.0.1",
     "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
@@ -25,9 +26,10 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-wow-egg",
-    "stop": "egg-scripts stop --title=egg-server-wow-egg",
-    "dev": "egg-bin dev",
+      "start": "egg-command start --daemon --title=template-admin-service --framework=egg-wow-admin-framework",
+      "stop": "egg-command stop --title=template-admin-service",
+      "build": "gulp && yarn run apidoc",
+      "dev": "egg-bin dev --framework=egg-wow-admin-framework",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
