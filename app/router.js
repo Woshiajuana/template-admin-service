@@ -173,7 +173,7 @@ const baseApiRoutes = [
     //         controller.apiRouteController.del,
     //     ],
     // },
-    
+
 
     // 菜单路由
     {
@@ -261,7 +261,7 @@ module.exports = app => {
     //     let { path, handler, method } = Object.assign({ method: 'POST' }, item);
     //     router[method.toLocaleLowerCase()](path, ...handler(app));
     // });
-    router.mountRouteByDir(controller);
+    router.mountRouteByController(controller);
 };
 
 module.exports.apiRoutes = apiRoutes;
