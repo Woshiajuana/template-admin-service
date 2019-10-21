@@ -5,6 +5,13 @@ const { Controller } = require('egg');
 
 module.exports = class HandleController extends Controller {
 
+    static route (app, middleware, controller) {
+        app.mount(
+            { name: 'DEMO 分发路由', path: '/api/demo/*' },
+            controller.transform,
+        );
+    }
+
     // 转发
     async transform () {
         const { ctx, service, app } = this;

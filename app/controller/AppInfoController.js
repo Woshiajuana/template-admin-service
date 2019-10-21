@@ -7,10 +7,10 @@ module.exports = class HandleController extends Controller {
 
     static route (app, middleware, controller) {
         app.router.mount(
-            { name: '查询应用基础信息', path: '/api/v1/app/info' },
+            { name: '查询应用基础信息', path: '/api/v1/app/info', usePush: false },
             controller.info
         ).mount(
-            { name: '初始化应用信息', path: '/api/v1/app/init' },
+            { name: '初始化应用信息', path: '/api/v1/app/init', usePush: false },
             controller.init
         );
     }

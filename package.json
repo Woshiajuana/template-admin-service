@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "egg": "^2.15.1",
-        "egg-wow-admin-framework": "0.0.4",
+        "egg-wow-admin-framework": "0.0.6",
         "egg-redis": "^2.4.0",
         "egg-cors": "^2.2.0",
         "egg-mongoose": "^3.2.0",
@@ -33,7 +33,7 @@
         "start": "egg-command start --daemon --title=template-admin-service --framework=egg-wow-admin-framework",
         "stop": "egg-command stop --title=template-admin-service",
         "build": "gulp && yarn run apidoc",
-        "dev": "egg-bin dev --framework=../../egg-wow-admin-framework",
+        "dev": "egg-bin dev --framework=egg-wow-admin-framework",
         "debug": "egg-bin debug",
         "test": "npm run lint -- --fix && npm run test-local",
         "test-local": "egg-bin test",
