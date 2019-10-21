@@ -40,7 +40,20 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 创建
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/create 创建管理员用户
+     * @apiDescription 创建管理员用户
+     * @apiGroup APP基础
+     * @apiParam  {String} [nickname] 昵称
+     * @apiParam  {String} [password] 密码
+     * @apiParam  {String} [avatar] 头像
+     * @apiParam  {String} [phone] 手机号
+     * @apiParam  {String} [email] 邮箱
+     * @apiParam  {String} [group] 用户组 id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/create
+     */
     async create () {
         const { ctx, service, app } = this;
         try {
@@ -59,7 +72,15 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 删除
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/delete 删除管理员用户
+     * @apiDescription 删除管理员用户
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/delete
+     */
     async del () {
         const { ctx, service, app } = this;
         try {
@@ -75,7 +96,21 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 编辑
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/update 编辑管理员用户
+     * @apiDescription 编辑管理员用户
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiParam  {String} [nickname] 昵称
+     * @apiParam  {String} [password] 密码
+     * @apiParam  {String} [avatar] 头像
+     * @apiParam  {String} [phone] 手机号
+     * @apiParam  {String} [email] 邮箱
+     * @apiParam  {String} [group] 用户组 id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/update
+     */
     async update () {
         const { ctx, service, app } = this;
         try {
@@ -95,7 +130,16 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 授权登录
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/login 用户安全登录
+     * @apiDescription 用户安全登录
+     * @apiGroup APP基础
+     * @apiParam  {String} [account] 账号
+     * @apiParam  {String} [password] 密码
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/login
+     */
     async login () {
         const { ctx, service, app } = this;
         try {
@@ -117,7 +161,14 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 用户安全退出
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/logout 用户安全退出
+     * @apiDescription 用户安全退出
+     * @apiGroup APP基础
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/logout
+     */
     async logout () {
         const { ctx, service, app } = this;
         try {
@@ -128,7 +179,20 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 用户列表
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-info/list 查询管理员用户列表
+     * @apiDescription 查询管理员用户列表
+     * @apiGroup APP基础
+     * @apiParam  {String} [numIndex] 页数
+     * @apiParam  {String} [numSize] 大小
+     * @apiParam  {String} [nickname] 昵称
+     * @apiParam  {String} [phone] 手机号
+     * @apiParam  {String} [email] 邮箱
+     * @apiParam  {String} [group] 用户组 id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-info/list
+     */
     async list () {
         const { ctx, service, app } = this;
         try {
