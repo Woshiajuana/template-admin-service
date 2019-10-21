@@ -1,6 +1,6 @@
 {
     "name": "egg-wow-admin-framework",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "egg-wow-admin-framework",
     "dependencies": {
         "egg": "^2.3.0"
