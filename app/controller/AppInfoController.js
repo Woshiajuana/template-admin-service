@@ -5,6 +5,16 @@ const { Controller } = require('egg');
 
 module.exports = class HandleController extends Controller {
 
+    static route (app, middleware, controller) {
+        app.router.mount(
+            { name: '查询应用基础信息', path: '/api/v1/app/info' },
+            controller.info
+        ).mount(
+            { name: '初始化应用信息', path: '/api/v1/app/init' },
+            controller.init
+        );
+    }
+
     // 查询信息
     async info () {
         const { ctx, service, app } = this;

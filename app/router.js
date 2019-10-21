@@ -122,59 +122,6 @@ const baseApiRoutes = [
         ],
     },
 
-    // Api 路由
-    // {
-    //     name: '查询API路由列表',
-    //     path: '/api/v1/api-route/list',
-    //     handler: ({ controller, middleware }) => [
-    //         middleware.jwtMiddleware(),
-    //         middleware.authMiddleware(),
-    //         // middleware.oplogMiddleware(),
-    //         controller.apiRouteController.list,
-    //     ],
-    // },
-    // {
-    //     name: '初始化路由列表',
-    //     path: '/api/v1/api-route/init',
-    //     handler: ({ controller, middleware }) => [
-    //         middleware.jwtMiddleware(),
-    //         middleware.authMiddleware(),
-    //         middleware.oplogMiddleware(),
-    //         controller.apiRouteController.init,
-    //     ],
-    // },
-    // {
-    //     name: '创建API路由',
-    //     path: '/api/v1/api-route/create',
-    //     handler: ({ controller, middleware }) => [
-    //         middleware.jwtMiddleware(),
-    //         middleware.authMiddleware(),
-    //         middleware.oplogMiddleware(),
-    //         controller.apiRouteController.create,
-    //     ],
-    // },
-    // {
-    //     name: '更新API路由',
-    //     path: '/api/v1/api-route/update',
-    //     handler: ({ controller, middleware }) => [
-    //         middleware.jwtMiddleware(),
-    //         middleware.authMiddleware(),
-    //         middleware.oplogMiddleware(),
-    //         controller.apiRouteController.update,
-    //     ],
-    // },
-    // {
-    //     name: '删除API路由',
-    //     path: '/api/v1/api-route/delete',
-    //     handler: ({ controller, middleware }) => [
-    //         middleware.jwtMiddleware(),
-    //         middleware.authMiddleware(),
-    //         middleware.oplogMiddleware(),
-    //         controller.apiRouteController.del,
-    //     ],
-    // },
-
-
     // 菜单路由
     {
         name: '查询菜单路由列表',
@@ -245,24 +192,8 @@ const apiRoutes =  [
     ...baseApiRoutes,
 ];
 
-const cmdPath = process.cwd();
-
-
 module.exports = app => {
     const { router, controller, middleware } = app;
-    // // 获取应用基础信息
-    // router.post('/api/v1/app/info', controller.appInfoController.info);
-    // // 初始化应用信息
-    // router.post('/api/v1/app/init', controller.appInfoController.init);
-    // // 管理员用户授权登录
-    // // router.post('/api/v1/user-info/login', middleware.oplogMiddleware(), controller.userInfoController.login);
-    // // 初始化路由
-    // apiRoutes.forEach((item) => {
-    //     let { path, handler, method } = Object.assign({ method: 'POST' }, item);
-    //     router[method.toLocaleLowerCase()](path, ...handler(app));
-    // });
-    // router.mountRouteByController(controller);
-    // 路由挂载
     router.mountRouteByControllerDirName();
 };
 
