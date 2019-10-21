@@ -38,7 +38,14 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 初始化
+    /**
+     * @apiVersion 1.0.0
+     * @api {post} /api/v1/api-route/init api 初始化
+     * @apiDescription 初始化 API-ROUTE
+     * @apiGroup APP基础
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/api-route/init
+     */
     async init () {
         const { ctx, service, app } = this;
         try {
@@ -49,7 +56,17 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 创建
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/api-route/create 创建API路由
+     * @apiDescription 创建API路由
+     * @apiGroup APP基础
+     * @apiParam  {String} [name] 名称
+     * @apiParam  {String} [path] 请求路径
+     * @apiParam  {String} [method] 请求方法
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/api-route/create
+     */
     async create () {
         const { ctx, service, app } = this;
         try {
@@ -65,7 +82,15 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 删除
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/api-route/delete 删除API路由
+     * @apiDescription 删除API路由
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/api-route/delete
+     */
     async del () {
         const { ctx, service, app } = this;
         try {
@@ -81,7 +106,15 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 编辑
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/api-route/update 更新API路由
+     * @apiDescription 更新API路由
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/api-route/update
+     */
     async update () {
         const { ctx, service, app } = this;
         try {
@@ -98,7 +131,19 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 用户列表
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/api-route/list 查询API路由列表
+     * @apiDescription 查询API路由列表
+     * @apiGroup APP基础
+     * @apiParam  {String} [numIndex] 页数
+     * @apiParam  {String} [numSize] 大小
+     * @apiParam  {String} [name] 名称
+     * @apiParam  {String} [path] 请求路径
+     * @apiParam  {String} [method] 请求方法
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/api-route/list
+     */
     async list () {
         const { ctx, service, app } = this;
         try {
