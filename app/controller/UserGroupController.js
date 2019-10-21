@@ -32,6 +32,18 @@ module.exports = class HandleController extends Controller {
         );
     }
 
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-group/create 创建管理员用户组
+     * @apiDescription 创建管理员用户组
+     * @apiGroup APP基础
+     * @apiParam  {String} [name] 名称
+     * @apiParam  {String} [remark] 备注
+     * @apiParam  {Array} [api_routes]  API路由
+     * @apiParam  {Array} [menu_routes] 菜单路由
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-group/create
+     */
     async create () {
         const { ctx, service, app } = this;
         try {
@@ -48,6 +60,17 @@ module.exports = class HandleController extends Controller {
         }
     }
 
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-group/list 查询管理员用户组列表
+     * @apiDescription 查询管理员用户组列表
+     * @apiGroup APP基础
+     * @apiParam  {String} [numIndex] 页数
+     * @apiParam  {String} [numSize] 大小
+     * @apiParam  {String} [name] 名称
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-group/list
+     */
     async list () {
         const { ctx, service, app } = this;
         try {
@@ -63,6 +86,15 @@ module.exports = class HandleController extends Controller {
         }
     }
 
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-group/delete 删除管理员用户组
+     * @apiDescription 删除管理员用户组
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-group/delete
+     */
     async del () {
         const { ctx, service, app } = this;
         try {
@@ -78,6 +110,19 @@ module.exports = class HandleController extends Controller {
         }
     }
 
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/user-group/update 更新管理员用户组
+     * @apiDescription 更新管理员用户组
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiParam  {String} [name] 名称
+     * @apiParam  {String} [remark] 备注
+     * @apiParam  {Array} [api_routes]  API路由
+     * @apiParam  {Array} [menu_routes] 菜单路由
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/user-group/update
+     */
     async update () {
         const { ctx, service, app } = this;
         try {
