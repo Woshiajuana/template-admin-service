@@ -20,7 +20,15 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 删除
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/oplog/delete 删除操作日志
+     * @apiDescription 删除操作日志
+     * @apiGroup APP基础
+     * @apiParam  {String} [id] id
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/oplog/delete
+     */
     async del () {
         const { ctx, service, app } = this;
         try {
@@ -36,7 +44,18 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 列表
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/v1/oplog/list 查询操作日志列表
+     * @apiDescription 查询操作日志列表
+     * @apiGroup APP基础
+     * @apiParam  {String} [numIndex] 页数
+     * @apiParam  {String} [numSize] 大小
+     * @apiParam  {String} [user] 管理员 id
+     * @apiParam  {String} [path] 操作 api
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/oplog/list
+     */
     async list () {
         const { ctx, service, app } = this;
         try {

@@ -13,7 +13,14 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 检测服务是否正常
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/health api 检测服务是否健康
+     * @apiDescription 检测服务是否健康
+     * @apiGroup APP基础
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/health
+     */
     async health () {
         this.ctx.respSuccess('I am very healthy');
     }

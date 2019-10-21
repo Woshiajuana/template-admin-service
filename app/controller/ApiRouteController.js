@@ -112,6 +112,9 @@ module.exports = class HandleController extends Controller {
      * @apiDescription 更新API路由
      * @apiGroup APP基础
      * @apiParam  {String} [id] id
+     * @apiParam  {String} [name] 名称
+     * @apiParam  {String} [path] 请求路径
+     * @apiParam  {String} [method] 请求方法
      * @apiSuccess (成功) {Object} data
      * @apiSampleRequest /api/v1/api-route/update
      */
