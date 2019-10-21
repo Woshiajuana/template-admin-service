@@ -261,7 +261,8 @@ module.exports = app => {
     //     let { path, handler, method } = Object.assign({ method: 'POST' }, item);
     //     router[method.toLocaleLowerCase()](path, ...handler(app));
     // });
-    router.mountRouteByController(controller);
+    // router.mountRouteByController(controller);
+    router.mountRouteByControllerDirName();
 };
 
 module.exports.apiRoutes = apiRoutes;

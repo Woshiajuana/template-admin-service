@@ -5,7 +5,7 @@ const { Controller } = require('egg');
 
 module.exports = class HandleController extends Controller {
 
-    static route (router, middleware, controller) {
+    static route ({ router, controller, middleware }) {
         console.log('到了这了 route=> ')
         router.mount({ name: '查询API路由列表', path: '/api/v1/api-route/list' },
             middleware.jwtMiddleware(),
