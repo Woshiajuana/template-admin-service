@@ -15,7 +15,14 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 查询信息
+    /**
+     * @apiVersion 1.0.0
+     * @api {post} /api/v1/app/info api 查询应用基础信息
+     * @apiDescription 查询应用基础信息
+     * @apiGroup APP基础
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/app/info
+     */
     async info () {
         const { ctx, service, app } = this;
         try {
@@ -26,7 +33,23 @@ module.exports = class HandleController extends Controller {
         }
     }
 
-    // 创建信息
+    /**
+     * @apiVersion 1.0.0
+     * @api {post} /api/v1/app/init api 初始化应用信息
+     * @apiDescription 初始化应用信息
+     * @apiGroup APP基础
+     * @apiParam  {String} [name] 管理台名称
+     * @apiParam  {String} [logo] 管理台LOGO
+     * @apiParam  {String} [theme] 主题
+     * @apiParam  {String} [ownership] 所有权
+     * @apiParam  {String} [nickname] 超级管理员名称
+     * @apiParam  {String} [password] 超级管理员密码
+     * @apiParam  {String} [avatar] 超级管理员头像
+     * @apiParam  {String} [phone] 超级管理员手机号
+     * @apiParam  {String} [email] 超级管理员邮箱
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/v1/app/init
+     */
     async init () {
         const { ctx, service, app } = this;
         try {
