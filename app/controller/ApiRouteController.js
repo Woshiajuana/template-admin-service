@@ -10,7 +10,6 @@ module.exports = class HandleController extends Controller {
             { name: '查询API路由列表', path: '/api/v1/api-route/list' },
             middleware.jwtMiddleware(),
             middleware.authMiddleware(),
-            middleware.oplogMiddleware(),
             controller.list
         ).mount(
             { name: '初始化路由列表', path: '/api/v1/api-route/init' },
