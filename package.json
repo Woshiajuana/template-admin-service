@@ -34,7 +34,7 @@
         "start": "egg-command start --daemon --title=template-admin-service --framework=egg-wow-admin-framework",
         "stop": "egg-command stop --title=template-admin-service",
         "build": "gulp && yarn run apidoc",
-        "dev": "egg-bin dev --framework=egg-wow-admin-framework",
+        "dev": "npm run apidoc && egg-bin dev --framework=egg-wow-admin-framework",
         "debug": "egg-bin debug",
         "test": "npm run lint -- --fix && npm run test-local",
         "test-local": "egg-bin test",
