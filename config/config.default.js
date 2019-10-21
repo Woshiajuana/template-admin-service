@@ -23,12 +23,6 @@ module.exports = appInfo => {
         },
     };
 
-    // add cors
-    config.cors = {
-        origin: '*', // 访问白名单,根据你自己的需要进行设置
-        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-    };
-
     // add email
     config.email = {
         client: {
@@ -92,19 +86,6 @@ module.exports = appInfo => {
         }
     };
 
-    // add your user config here
-    const userConfig = {
-        // myAppName: 'egg',
-        view: {
-            defaultViewEngine: 'nunjucks',
-            mapping: {
-                '.tpl': 'nunjucks',
-            },
-        },
-    };
 
-    return {
-        ...config,
-        ...userConfig,
-    };
+    return config;
 };
