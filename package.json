@@ -31,8 +31,8 @@
         "node": ">=10.0.0"
     },
     "scripts": {
-        "start": "egg-command start --daemon --title=template-admin-service --framework=egg-wow-admin-framework",
-        "stop": "egg-command stop --title=template-admin-service",
+        "start": "egg-scripts start --daemon --title=template-admin-service --framework=egg-wow-admin-framework",
+        "stop": "egg-scripts stop --title=template-admin-service",
         "dev": "npm run apidoc && egg-bin dev --framework=egg-wow-admin-framework",
         "debug": "egg-bin debug",
         "test": "npm run lint -- --fix && npm run test-local",
