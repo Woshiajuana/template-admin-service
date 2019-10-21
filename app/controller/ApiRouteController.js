@@ -5,33 +5,33 @@ const { Controller } = require('egg');
 
 module.exports = class HandleController extends Controller {
 
-    static route ({ router, controller, middleware }) {
+    static route (app, middleware, controller) {
         console.log('到了这了 route=> ')
-        router.mount({ name: '查询API路由列表', path: '/api/v1/api-route/list' },
-            middleware.jwtMiddleware(),
-            middleware.authMiddleware(),
+        app.router.mount({ name: '查询API路由列表', path: '/api/v1/api-route/list' },
+            // middleware.jwtMiddleware(),
+            // middleware.authMiddleware(),
             // middleware.oplogMiddleware(),
-            controller.apiRouteController.list
+            controller.list
         ).mount({ name: '初始化路由列表', path: '/api/v1/api-route/init' },
             middleware.jwtMiddleware(),
             middleware.authMiddleware(),
             middleware.oplogMiddleware(),
-            controller.apiRouteController.init
+            controller.init
         ).mount({ name: '创建API路由', path: '/api/v1/api-route/create' },
             middleware.jwtMiddleware(),
             middleware.authMiddleware(),
             middleware.oplogMiddleware(),
-            controller.apiRouteController.create,
+            controller.create,
         ).mount({ name: '更新API路由', path: '/api/v1/api-route/update' },
             middleware.jwtMiddleware(),
             middleware.authMiddleware(),
             middleware.oplogMiddleware(),
-            controller.apiRouteController.update,
+            controller.update,
         ).mount({ name: '删除API路由', path: '/api/v1/api-route/delete' },
             middleware.jwtMiddleware(),
             middleware.authMiddleware(),
             middleware.oplogMiddleware(),
-            controller.apiRouteController.del,
+            controller.del,
         );
     }
 

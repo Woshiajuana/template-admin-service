@@ -262,6 +262,7 @@ module.exports = app => {
     //     router[method.toLocaleLowerCase()](path, ...handler(app));
     // });
     // router.mountRouteByController(controller);
+    // 路由挂载
     router.mountRouteByControllerDirName();
 };
 
