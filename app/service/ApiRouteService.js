@@ -63,9 +63,7 @@ module.exports = class HandleServer extends Service {
                 numSize,
             }
         } else {
-            const arrData = await ctx.model.ApiRouteModel
-                .find().sort('-created_at').lean();
-            return arrData;
+            return await ctx.model.ApiRouteModel.find().sort('-created_at').lean();
         }
     }
 
