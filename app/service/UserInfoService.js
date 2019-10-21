@@ -2,7 +2,7 @@
 'use strict';
 
 const { Service } = require('egg');
-const { populate, select, listSelect } = require('./../model/userInfoModel');
+const { populate, select, listSelect } = require('./../model/UserInfoModel');
 const ms = require('ms');
 
 module.exports = class HandleServer extends Service {

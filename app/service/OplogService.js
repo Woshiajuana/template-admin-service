@@ -2,7 +2,7 @@
 'use strict';
 
 const { Service } = require('egg');
-const { populate } = require('./../model/oplogModel');
+const { populate } = require('./../model/OplogModel');
 
 module.exports = class HandleServer extends Service {
 
