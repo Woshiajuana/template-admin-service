@@ -12,7 +12,14 @@ module.exports = class HandleController extends Controller {
         );
     }
 
-    // 转发
+    /**
+     * @apiVersion 1.0.0
+     * @api {get} /api/demo/* DEMO 分发路由
+     * @apiDescription DEMO 分发路由
+     * @apiGroup APP基础
+     * @apiSuccess (成功) {Object} data
+     * @apiSampleRequest /api/demo/*
+     */
     async transform () {
         const { ctx, service, app } = this;
         try {
