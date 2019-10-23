@@ -13,7 +13,7 @@
         "egg-redis": "^2.4.0",
         "egg-cors": "^2.2.0",
         "egg-mongoose": "^3.2.0",
-        "egg-wow-jwt": "0.0.1",
+        "egg-wow-jwt": "0.0.2",
         "egg-wow-response": "0.0.1",
         "egg-wow-validate": "0.0.1",
         "egg-scripts": "^2.11.0",
